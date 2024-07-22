@@ -43,8 +43,10 @@ Note 2: We also want to generate new public & private keys
    4. Update product
    5. Delete product
 
-```markdown
 ## Installation
+
+First, initialize your project and then install the necessary dependencies and development dependencies:
+
 ```bash
 npm init -y
 npm install express zod config cors express mongoose pino pino-pretty dayjs bcrypt jsonwebtoken lodash nanoid
