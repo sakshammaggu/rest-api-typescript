@@ -51,6 +51,7 @@ First, initialize your project and then install the necessary dependencies and d
 npm init -y
 npm install express zod config cors express mongoose pino pino-pretty dayjs bcrypt jsonwebtoken lodash nanoid
 npm install @types/body-parser @types/config @types/cors @types/express @types/node @types/pino @types/bcrypt @types/jsonwebtoken @types/lodash @types/nanoid ts-node-dev typescript --save-dev
+```
 
 ## Data flow
 ![](./public/images/data-flow.png)
