@@ -1,16 +1,14 @@
 import mongoose from "mongoose";
 import config from "config";
+import log from "./logger";
 
 const connectMongoDb=async ()=>{
     const dbUrl=config.get<string>('dbUrl');
     try {
-        mongoose
-            .connect(dbUrl)
-            .then(()=>{
-                console.log("Connected to MongoDB");
-            })
+        await mongoose.connect(dbUrl);
+        log.info("Connected to MongoDB");
     } catch (error) {
-        console.log("Failed to connect MongoDB");
+        log.error("Failed to connect MongoDB");
         process.exit(1);
     }
 };
