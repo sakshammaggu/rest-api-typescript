@@ -13,7 +13,7 @@ const routes=(app: Express)=>{
     });
 
     app.post('/api/users', validateResource(createUserSchema), createUserHandler);  // create user rest-api
-    app.post('/api/admin', validateResource(createAdminSchema), createAdminHandler)
+    app.post('/api/admin', validateResource(createAdminSchema), createAdminHandler) // create admin rest-api
 };
 
 export default routes;

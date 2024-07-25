@@ -26,17 +26,14 @@ const adminSchema=new mongoose.Schema({
     name: {
         type: String, 
         required: true,
-        unique: true
     },
     password: {
         type: String,
         reaquired: true,
-        unique: true
     },
     email: {
         type: String, 
         required: true, 
-        unique: true
     },
     adminToken: {
         type: String,

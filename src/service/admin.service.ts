@@ -3,8 +3,8 @@ import AdminModel, { AdminInput } from "../models/admin.model";
 
 export async function createAdmin(input: AdminInput) {
     try {
-        const user=await AdminModel.create(input);
-        return omit(user.toJSON());
+        const admin=await AdminModel.create(input);
+        return omit(admin.toJSON(), ["password", "adminToken"]);
     } catch (e:any) {
         throw new Error(e);
     }
