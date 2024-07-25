@@ -2,7 +2,6 @@ import { Request, Response } from "express";
 import log from "../utils/logger";
 import { createUser } from "../service/user.service";
 import { CreateUserInput } from "../schema/user.schema";
-import { omit } from "lodash";
 
 export async function createUserHandler(
     req: Request<{}, {}, CreateUserInput['body']>, 
